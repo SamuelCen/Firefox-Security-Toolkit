@@ -1,9 +1,9 @@
 #!/bin/bash
 ################################################################################
-## Firefox Security Toolkit
+## Firefox Security Toolkit OSINT Version
 ## Description:
-# This script automatically transform Firefox Browser to a penetration testing suite.
-# The script mainly focuses on downloading the required add-ons for web-application penetration testing.
+# This script automatically transform Firefox Browser to a OSINT investigation suite.
+# The script mainly focuses on downloading the required add-ons for OSINT investigations.
 ## Version:
 # v0.7
 ## Homepage:
@@ -39,35 +39,31 @@ echo -e "Usage:\n\t"
 echo -e "bash $0 run"
 echo -e "\n"
 echo -e '[%%] Available Add-ons:'
-echo '* Copy PlainText
-* CSRF spotter
-* Disable WebRTC
-* Easy XSS
-* Flagfox
-* FoxyProxy Standard
-* Google Dork Builder
-* HackBar Quantum
-* HackBar V2
-* HackTools
-* HTTP Header Live
-* iMacros for Firefox
-* JSONView
-* KNOXSS Community Edition
-* Resurrect Pages
-* Shodan.io
-* show-my-ip
-* User-Agent Switcher and Manager
-* Wappalyzer
-* Web Developer
-* XML Viewer Plus
+echo 'User-Agent Switcher and Manager
+IP Address and Domain Information
+Privacy Badger
+uBlock Origin
+Wayback Machine
+Sputnik
+Search by Image
+Buster: Captcha Solver for Humans
+I don´t care about cookies
+Copyfish
+Wappalyzer
+Vulners Web Scanner
+Undo Close Tab
+HTTP Header Live
+Google Dork Builder
+Disable WebRTC
+Shodan.io
 '
 
-echo '[%%] Additions & Features:'
-echo '* Downloading Burp Suite certificate'
-echo '* Downloading a large user-agent list for User-Agent Switcher'
-echo -e "\n\n"
-echo "[$] Legal Disclaimer: Usage of Firefox Security Toolkit for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program"
-}
+#'[%%] Additions & Features:'
+#echo '* Downloading Burp Suite certificate'
+#echo '* Downloading a large user-agent list for User-Agent Switcher'
+#echo -e "\n\n"
+#echo "[$] Legal Disclaimer: Usage of Firefox Security Toolkit for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program"
+#}
 
 if [[ $1 != 'run' ]];then
   welcome
@@ -121,69 +117,56 @@ echo -n "[@] Would you like to download Burp Suite certificate? [y/n]. (Note: Bu
 # downloading packages.
 echo -e "[*] Downloading Add-ons."
 
-# Copy PlainText
-wget "https://addons.mozilla.org/firefox/downloads/file/3420581/copy_plaintext-1.10-fx.xpi" -o /dev/null -O "$scriptpath/copy_plaintext-1.10-fx.xpi"
+# User-Agent Switcher and Manager
+wget "https://addons.mozilla.org/firefox/downloads/file/3769639/user_agent_switcher_and_manager-0.4.7.1-an+fx.xpi" -o /dev/null -O "$scriptpath/user_agent_switcher_and_manager-0.4.7.1-an+fx.xpi"
 
-# CSRF spotter
-wget "https://addons.mozilla.org/firefox/downloads/file/2209785/csrf_spotter-1.0-fx.xpi" -o /dev/null -O "$scriptpath/csrf_spotter-1.0-fx.xpi"
+# IP Address and Domain Information
+wget "https://addons.mozilla.org/firefox/downloads/file/3637661/ip_address_and_domain_information-4.0.6.0-fx.xpi" -o /dev/null -O "$scriptpath/ip_address_and_domain_information-4.0.6.0-fx.xpi"
 
-# Easy XSS
-wget "https://addons.mozilla.org/firefox/downloads/file/1158849/easy_xss-1.0-fx.xpi" -o /dev/null -O "$scriptpath/easy_xss-1.0-fx.xpi"
+# Privacy Badger
+wget "https://addons.mozilla.org/firefox/downloads/file/3719726/privacy_badger-2021.2.2-an+fx.xpi" -o /dev/null -O "$scriptpath/privacy_badger-2021.2.2-an+fx.xpi"
 
-# Flagfox
-wget "https://addons.mozilla.org/firefox/downloads/file/3538268/flagfox-6.1.25-fx.xpi" -o /dev/null -O "$scriptpath/flagfox-6.1.25-fx.xpi"
+# uBlock Origin
+wget "https://addons.mozilla.org/firefox/downloads/file/3768975/ublock_origin-1.35.2-an+fx.xpi" -o /dev/null -O "$scriptpath/ublock_origin-1.35.2-an+fx.xpi"
 
-# FoxyProxy Standard
-wget "https://addons.mozilla.org/firefox/downloads/file/3476518/foxyproxy_standard-7.4.3-an+fx.xpi" -o /dev/null -O "$scriptpath/foxyproxy_standard-7.4.3-an+fx.xpi"
+# Wayback Machine
+wget "https://addons.mozilla.org/firefox/downloads/file/929315/wayback_machine-1.8.6-an+fx.xpi" -o /dev/null -O "$scriptpath/wayback_machine-1.8.6-an+fx.xpi"
 
-# Google Dork Builder
-wget "https://addons.mozilla.org/firefox/downloads/file/3453468/google_dork_builder-0.6-fx.xpi" -o /dev/null -O "$scriptpath/google_dork_builder-0.6-fx.xpi"
+# Sputnik
+wget "https://addons.mozilla.org/firefox/downloads/file/3752246/sputnik-1.28-fx.xpi" -o /dev/null -O "$scriptpath/sputnik-1.28-fx.xpi"
 
-# HackBar V2
-wget "https://addons.mozilla.org/firefox/downloads/file/3450934/hackbar_v2-2.4.1-fx.xpi" -o /dev/null -O "$scriptpath/hackbar_v2-2.4.1-fx.xpi"
+# Search by Image
+wget "https://addons.mozilla.org/firefox/downloads/file/3767226/search_by_image-3.6.2-an+fx.xpi" -o /dev/null -O "$scriptpath/search_by_image-3.6.2-an+fx.xpi"
 
-# HackBar Quantum
-wget "https://addons.mozilla.org/firefox/downloads/file/934299/hackbar_quantum-1.6-an+fx.xpi" -o /dev/null -O "$scriptpath/hackbar_quantum-1.6-an+fx.xpi"
+# Buster: Captcha Solver for Humans
+wget "https://addons.mozilla.org/firefox/downloads/file/3768455/buster_captcha_solver_for_humans-1.2.0-an+fx.xpi" -o /dev/null -O "$scriptpath/buster_captcha_solver_for_humans-1.2.0-an+fx.xpi"
 
-# Disable WebRTC
-wget "https://addons.mozilla.org/firefox/downloads/file/3048824/disable_webrtc-1.0.21-an+fx.xpi" -o /dev/null -O "$scriptpath/disable_webrtc-1.0.21-an+fx.xpi"
+# I don't care about cookies
+wget "https://addons.mozilla.org/firefox/downloads/file/3761156/i_dont_care_about_cookies-3.3.0-an+fx.xpi" -o /dev/null -O "$scriptpath/i_dont_care_about_cookies-3.3.0-an+fx.xpi"
+
+# Copyfish
+wget "https://addons.mozilla.org/firefox/downloads/file/3765111/copyfish-5.1.9-fx.xpi" -o /dev/null -O "$scriptpath/copyfish-5.1.9-fx.xpi"
+
+# Wappalyzer
+wget "https://addons.mozilla.org/firefox/downloads/file/3789734/wappalyzer-6.7.4-fx.xpi" -o /dev/null -O "$scriptpath/wappalyzer-6.7.4-fx.xpi"
+
+# Vulners Web Scanner
+wget "https://addons.mozilla.org/firefox/downloads/file/817904/vulners_web_scanner-1.0.6-an+fx-linux.xpi" -o /dev/null -O "$scriptpath/vulners_web_scanner-1.0.6-an+fx-linux.xpi"
 
 # HTTP Header Live
 wget "https://addons.mozilla.org/firefox/downloads/file/3384326/http_header_live-0.6.5.2-fx.xpi" -o /dev/null -O "$scriptpath/http_header_live-0.6.5.2-fx.xpi"
 
-# iMacros for Firefox
-wget "https://addons.mozilla.org/firefox/downloads/file/1010019/imacros_for_firefox-10.0.2.1450-an+fx-linux.xpi" -o /dev/null -O "$scriptpath/imacros_for_firefox-10.0.2.1450-an+fx-linux.xpi"
+# Google Dork Builder
+wget "https://addons.mozilla.org/firefox/downloads/file/3614823/google_dork_builder-0.8-fx.xpi" -o /dev/null -O "$scriptpath/google_dork_builder-0.8-fx.xpi"
 
-# JSONView
-wget "https://addons.mozilla.org/firefox/downloads/file/1713269/jsonview-2.1.0-fx.xpi" -o /dev/null -O "$scriptpath/jsonview-2.1.0-fx.xpi"
+# Undo Close Tab
+wget "https://addons.mozilla.org/firefox/downloads/file/3674240/geschlossenen_tab_wiederherstellen-7.1.0-an+fx.xpi" -o /dev/null -O "$scriptpath/geschlossenen_tab_wiederherstellen-7.1.0-an+fx.xpi"
 
-# KNOXSS Community Edition
-wget "https://addons.mozilla.org/firefox/downloads/file/3378216/knoxss_community_edition-0.2.0-fx.xpi" -o /dev/null -O "$scriptpath/knoxss_community_edition-0.2.0-fx.xpi"
-
-# Resurrect Pages
-wget "https://addons.mozilla.org/firefox/downloads/file/926958/resurrect_pages-7-an+fx.xpi" -o /dev/null -O "$scriptpath/resurrect_pages-7-an+fx.xpi"
+# Disable WebRTC
+wget "https://addons.mozilla.org/firefox/downloads/file/3551985/disable_webrtc-1.0.23-an+fx.xpi" -o /dev/null -O "$scriptpath/disable_webrtc-1.0.23-an+fx.xpi"
 
 # Shodan.io
 wget "https://addons.mozilla.org/firefox/downloads/file/788781/shodanio-0.3.2-an+fx.xpi" -o /dev/null -O "$scriptpath/shodanio-0.3.2-an+fx.xpi"
-
-# show-my-ip
-wget "https://addons.mozilla.org/firefox/downloads/file/3458407/show_my_ip-1.5-fx.xpi" -o /dev/null -O "$scriptpath/show_my_ip-1.5-fx.xpi"
-
-# User-Agent Switcher and Manager
-wget "https://addons.mozilla.org/firefox/downloads/file/3527040/user_agent_switcher_and_manager-0.3.5-an+fx.xpi" -o /dev/null -O "$scriptpath/user_agent_switcher_and_manager-0.3.5-an+fx.xpi"
-
-# Wappalyzer
-wget "https://addons.mozilla.org/firefox/downloads/file/3539068/wappalyzer-5.9.30-fx.xpi" -o /dev/null -O "$scriptpath/wappalyzer-5.9.30-fx.xpi"
-
-# Web Developer
-wget "https://addons.mozilla.org/firefox/downloads/file/3484096/web_developer-2.0.5-an+fx.xpi" -o /dev/null -O "$scriptpath/web_developer-2.0.5-an+fx.xpi"
-
-# XML Viewer Plus
-wget "https://addons.mozilla.org/firefox/downloads/file/3032172/xml_viewer_plus-1.2.6-an+fx.xpi" -o /dev/null -O "$scriptpath/xml_viewer_plus-1.2.6-an+fx.xpi"
-
-# HackTools
-wget "https://addons.mozilla.org/firefox/downloads/file/3707062/hacktools-0.3.2-fx.xpi" -o /dev/null -O "$scriptpath/hacktools-0.3.2-fx.xpi"
-
 
 # checks whether to download user-agent list for User-Agent Switcher add-on.
 echo -n "[@] Would you like to download user-agent list for User-Agent Switcher add-on? [y/n]: "; read -r useragent_list_answer

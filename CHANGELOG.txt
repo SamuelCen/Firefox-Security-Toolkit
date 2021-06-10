@@ -1,12 +1,16 @@
 ################################################################################
 ## Firefox Security Toolkit
 ## Description:
-# This script automatically transform Firefox Browser to a penetration testing suite.
-# The script mainly focuses on downloading the required add-ons for web-application penetration testing.
-## Homepage:
+# This script automatically transform Firefox Browser to a OSINT investigation suite.
+# The script mainly focuses on downloading the required add-ons for OSINT investigations.
+## Based:
 # https://github.com/mazen160/Firefox-Security-Toolkit
-## Author:
+## Homepage:
+# https://github.com/SamuelCen/Firefox-Security-Toolkit.git
+## Original Author:
 # Mazin Ahmed <mazin AT mazinahmed DOT net>
+## Copy Author:
+# Samuel Cenobio 
 ################################################################################
 
 
